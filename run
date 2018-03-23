@@ -1,0 +1,15 @@
+#! usr/bin/env php
+<?php
+
+namespace Creational\Builder;
+
+require_once 'vendor/autoload.php';
+
+$master = new DanilaMaster();
+$master->buildComputer('Yosemite');
+
+$myMac = $master->getComputer();
+$myMac->increaseRam(4)->overclockGpu()->increaseHdd(6)->overclockCpu(1500);
+$myMac->changeSoftware('Mavericks');
+
+print_r($myMac);
