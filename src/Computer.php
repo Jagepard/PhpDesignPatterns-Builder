@@ -53,14 +53,6 @@ class Computer
     }
 
     /**
-     * @return mixed
-     */
-    public function getSoftware(): string
-    {
-        return $this->software;
-    }
-
-    /**
      * @param null $key
      * @return $this
      */
@@ -108,5 +100,45 @@ class Computer
     {
         $this->software = $software;
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSoftware(): string
+    {
+        return $this->software;
+    }
+
+    /**
+     * @return int
+     */
+    public function getHdd(): int
+    {
+        return $this->hdd;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRam(): int
+    {
+        return $this->ram;
+    }
+
+    /**
+     * @return int
+     */
+    public function getGpu(): int
+    {
+        return $this->gpu;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCpu(): int
+    {
+        return $this->cpu;
     }
 }
