@@ -5,11 +5,12 @@ namespace Creational\Builder;
 
 require_once 'vendor/autoload.php';
 
-$master = new DanilaMaster();
-$master->buildComputer('Yosemite');
+$master = new Master(new DesktopBuilder());
+$master->getBuilder()
+    ->addParam('hdd', 1024)
+    ->addParam('ram', 8192)
+    ->addParam('cpu', 3000)
+    ->addParam('gpu', 5000)
+    ->addParam('software', 'UNIX');
 
-$myMac = $master->getComputer();
-$myMac->increaseRam(4)->overclockGpu()->increaseHdd(6)->overclockCpu(1500);
-$myMac->changeSoftware('Mavericks');
-
-print_r($myMac);
+print_r($master->build());
