@@ -5,5 +5,5 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-498e7f.svg)](https://mit-license.org/)
 -----
 
-# Builder
+# Builder | [API](https://github.com/Jagepard/PhpDesignPatterns-Builder/blob/master/docs.md "Documentation API")
 Строитель
