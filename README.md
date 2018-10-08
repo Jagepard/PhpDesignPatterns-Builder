@@ -7,3 +7,5 @@
 
 # Builder | [API](https://github.com/Jagepard/PhpDesignPatterns-Builder/blob/master/docs.md "Documentation API")
 Строитель
+
+![Builder](https://github.com/Jagepard/PhpDesignPatterns-Builder/blob/master/UML.png)
