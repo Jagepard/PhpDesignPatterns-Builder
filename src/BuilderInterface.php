@@ -14,7 +14,6 @@ namespace Creational\Builder;
  */
 interface BuilderInterface
 {
-
     /**
      * @param string $key
      * @param        $value
