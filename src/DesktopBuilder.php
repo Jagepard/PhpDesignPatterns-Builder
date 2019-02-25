@@ -15,7 +15,6 @@ namespace Creational\Builder;
  */
 class DesktopBuilder implements BuilderInterface
 {
-
     /**
      * @var array
      */
@@ -26,7 +25,7 @@ class DesktopBuilder implements BuilderInterface
      * @param        $value
      * @return $this
      */
-    public function addParam(string $key, $value): BuilderInterface
+    public function setParam(string $key, $value): BuilderInterface
     {
         $this->params[$key] = $value;
 
