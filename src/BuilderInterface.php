@@ -14,13 +14,12 @@ namespace Creational\Builder;
  */
 interface BuilderInterface
 {
-
     /**
      * @param string $key
      * @param        $value
      * @return $this
      */
-    public function addParam(string $key, $value): BuilderInterface;
+    public function setParam(string $key, $value): BuilderInterface;
 
     /**
      * @return AbstractComputer
