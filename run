@@ -5,12 +5,13 @@ namespace Creational\Builder;
 
 require_once 'vendor/autoload.php';
 
-$master = new Master(new DesktopBuilder());
-$master->getBuilder()
-    ->addParam('hdd', 1024)
-    ->addParam('ram', 8192)
-    ->addParam('cpu', 3000)
-    ->addParam('gpu', 5000)
-    ->addParam('software', 'UNIX');
+$employee= new Master();
+$employee->setBuilder(new DesktopBuilder());
+$employee->getBuilder()
+    ->setParam('hdd', 1024)
+    ->setParam('ram', 8192)
+    ->setParam('cpu', 3000)
+    ->setParam('gpu', 5000)
+    ->setParam('software', 'UNIX');
 
-print_r($master->build());
+print_r($employee->build());
