@@ -18,7 +18,7 @@ class DesktopBuilder implements BuilderInterface
     /**
      * @var array
      */
-    protected $params;
+    private $params;
 
     /**
      * @param string $key
