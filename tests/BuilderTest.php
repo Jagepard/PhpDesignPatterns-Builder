@@ -20,26 +20,34 @@ use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
  */
 class BuilderTest extends PHPUnit_Framework_TestCase
 {
-
     /**
      * @var Master
      */
-    protected $master;
+    private $master;
 
     protected function setUp(): void
     {
-        $this->master = new Master(new DesktopBuilder());
+        $this->master = new Master();
     }
 
     public function testInstance()
     {
-        $this->master->getBuilder()
-            ->addParam('hdd', 1024)
-            ->addParam('ram', 8192)
-            ->addParam('cpu', 3000)
-            ->addParam('gpu', 5000)
-            ->addParam('software', 'UNIX');
+        $this->getMaster()->setBuilder(new DesktopBuilder());
+        $this->getMaster()->getBuilder()
+            ->setParam('hdd', 1024)
+            ->setParam('ram', 8192)
+            ->setParam('cpu', 3000)
+            ->setParam('gpu', 5000)
+            ->setParam('software', 'UNIX');
 
-        $this->assertInstanceOf(AbstractComputer::class, $this->master->build());
+        $this->assertInstanceOf(AbstractComputer::class, $this->getMaster()->build());
+    }
+
+    /**
+     * @return Master
+     */
+    public function getMaster(): Master
+    {
+        return $this->master;
     }
 }
