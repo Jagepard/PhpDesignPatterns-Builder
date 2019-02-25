@@ -15,11 +15,10 @@ namespace Creational\Builder;
  */
 abstract class AbstractComputer
 {
-
     /**
      * @var array
      */
-    protected $components = [];
+    private $components = [];
 
     /**
      * AbstractComputer constructor.
