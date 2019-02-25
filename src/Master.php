@@ -13,29 +13,19 @@ namespace Creational\Builder;
  * Class Director
  * @package Creational\Builder
  */
-class Master
+class Master implements MasterInterface
 {
-
     /**
      * @var BuilderInterface
      */
-    protected $builder;
-
-    /**
-     * Master constructor.
-     * @param BuilderInterface $builder
-     */
-    public function __construct(BuilderInterface $builder)
-    {
-        $this->builder = $builder;
-    }
+    private $builder;
 
     /**
      * @return AbstractComputer
      */
     public function build(): AbstractComputer
     {
-        return $this->builder->getComputer();
+        return $this->getBuilder()->getComputer();
     }
 
     /**
@@ -45,4 +35,13 @@ class Master
     {
         return $this->builder;
     }
+
+    /**
+     * @param BuilderInterface $builder
+     */
+    public function setBuilder(BuilderInterface $builder): void
+    {
+        $this->builder = $builder;
+    }
+
 }
