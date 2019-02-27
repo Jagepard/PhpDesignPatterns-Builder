@@ -8,10 +8,11 @@ require_once 'vendor/autoload.php';
 $employee= new Master();
 $employee->setBuilder(new DesktopBuilder());
 $employee->getBuilder()
-    ->setParam('hdd', 1024)
-    ->setParam('ram', 8192)
-    ->setParam('cpu', 3000)
-    ->setParam('gpu', 5000)
-    ->setParam('software', 'UNIX');
+    ->setParam(new Motherboard('Hardware'))
+    ->setParam(new Hdd('2Tb'))
+    ->setParam(new Ram('32Gb'))
+    ->setParam(new Cpu('8 core'))
+    ->setParam(new Gpu('16Gb'))
+    ->setParam(new Software('UNIX'));
 
 print_r($employee->build());
