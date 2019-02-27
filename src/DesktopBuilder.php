@@ -21,21 +21,20 @@ class DesktopBuilder implements BuilderInterface
     private $params;
 
     /**
-     * @param string $key
-     * @param        $value
-     * @return $this
+     * @param ParamsInterface $params
+     * @return BuilderInterface
      */
-    public function setParam(string $key, $value): BuilderInterface
+    public function setParam(ParamsInterface $params): BuilderInterface
     {
-        $this->params[$key] = $value;
+        $this->params[] = $params;
 
         return $this;
     }
 
     /**
-     * @return AbstractComputer
+     * @return ComputerInterface
      */
-    public function getComputer(): AbstractComputer
+    public function getComputer(): ComputerInterface
     {
         return new Desktop($this->params);
     }

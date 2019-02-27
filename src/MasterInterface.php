@@ -14,9 +14,9 @@ namespace Creational\Builder;
 interface MasterInterface
 {
     /**
-     * @return AbstractComputer
+     * @return ComputerInterface
      */
-    public function build(): AbstractComputer;
+    public function build(): ComputerInterface;
 
     /**
      * @return BuilderInterface
