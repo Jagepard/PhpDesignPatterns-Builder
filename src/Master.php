@@ -21,9 +21,9 @@ class Master implements MasterInterface
     private $builder;
 
     /**
-     * @return AbstractComputer
+     * @return ComputerInterface
      */
-    public function build(): AbstractComputer
+    public function build(): ComputerInterface
     {
         return $this->getBuilder()->getComputer();
     }

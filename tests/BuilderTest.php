@@ -9,9 +9,15 @@ declare(strict_types=1);
 
 namespace Creational\Builder\Tests;
 
+use Creational\Builder\Cpu;
+use Creational\Builder\Gpu;
+use Creational\Builder\Hdd;
+use Creational\Builder\Ram;
 use Creational\Builder\Master;
+use Creational\Builder\Software;
+use Creational\Builder\Motherboard;
 use Creational\Builder\DesktopBuilder;
-use Creational\Builder\AbstractComputer;
+use Creational\Builder\ComputerInterface;
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 /**
@@ -34,13 +40,14 @@ class BuilderTest extends PHPUnit_Framework_TestCase
     {
         $this->getMaster()->setBuilder(new DesktopBuilder());
         $this->getMaster()->getBuilder()
-            ->setParam('hdd', 1024)
-            ->setParam('ram', 8192)
-            ->setParam('cpu', 3000)
-            ->setParam('gpu', 5000)
-            ->setParam('software', 'UNIX');
+            ->setParam(new Motherboard('Hardware'))
+            ->setParam(new Hdd('2Tb'))
+            ->setParam(new Ram('32Gb'))
+            ->setParam(new Cpu('8 core'))
+            ->setParam(new Gpu('16Gb'))
+            ->setParam(new Software('UNIX'));
 
-        $this->assertInstanceOf(AbstractComputer::class, $this->getMaster()->build());
+        $this->assertInstanceOf(ComputerInterface::class, $this->getMaster()->build());
     }
 
     /**

@@ -13,7 +13,19 @@ namespace Creational\Builder;
  * Class Desktop
  * @package Creational\Builder
  */
-class Desktop extends AbstractComputer
+class Desktop implements ComputerInterface
 {
+    /**
+     * @var array
+     */
+    private $components = [];
 
+    /**
+     * AbstractComputer constructor.
+     * @param array $params
+     */
+    public function __construct(array $params)
+    {
+        $this->components = $params;
+    }
 }
