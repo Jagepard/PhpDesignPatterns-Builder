@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-/**
- * Class Hdd
- * @package Creational\Builder
- */
 class Hdd implements ParamsInterface
 {
     use ParamsTrait;

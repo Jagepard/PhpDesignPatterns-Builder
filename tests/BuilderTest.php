@@ -20,10 +20,6 @@ use Creational\Builder\DesktopBuilder;
 use Creational\Builder\ComputerInterface;
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
-/**
- * Class BuilderTest
- * @package Creational\Builder\Tests
- */
 class BuilderTest extends PHPUnit_Framework_TestCase
 {
     /**

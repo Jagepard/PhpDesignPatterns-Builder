@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-/**
- * Class ComputerBuilder
- * @package Creational\Builder
- */
 class DesktopBuilder implements BuilderInterface
 {
     /**

@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-/**
- * Class Cpu
- * @package Creational\Builder
- */
 class Cpu implements ParamsInterface
 {
     use ParamsTrait;

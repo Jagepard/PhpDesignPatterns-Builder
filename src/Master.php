@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-/**
- * Class Director
- * @package Creational\Builder
- */
 class Master implements MasterInterface
 {
     /**
