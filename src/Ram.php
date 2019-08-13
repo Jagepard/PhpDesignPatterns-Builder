@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-/**
- * Class Ram
- * @package Creational\Builder
- */
 class Ram implements ParamsInterface
 {
     use ParamsTrait;

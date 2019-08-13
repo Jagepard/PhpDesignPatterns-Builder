@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-/**
- * Class Software
- * @package Creational\Builder
- */
 class Software implements ParamsInterface
 {
     use ParamsTrait;

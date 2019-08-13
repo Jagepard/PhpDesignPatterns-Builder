@@ -9,9 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-/**
- * Interface BuilderInterface
- */
 interface BuilderInterface
 {
     /**

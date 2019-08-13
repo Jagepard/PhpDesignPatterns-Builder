@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-/**
- * Class Motherboard
- * @package Creational\Builder
- */
 class Motherboard implements ParamsInterface
 {
     use ParamsTrait;

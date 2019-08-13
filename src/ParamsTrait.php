@@ -9,10 +9,6 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-/**
- * Trait ParamsTrait
- * @package Creational\Builder
- */
 trait ParamsTrait
 {
     /**

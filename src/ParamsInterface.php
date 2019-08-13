@@ -7,9 +7,6 @@
 
 namespace Creational\Builder;
 
-/**
- * Interface ParamInterface
- */
 interface ParamsInterface
 {
     /**

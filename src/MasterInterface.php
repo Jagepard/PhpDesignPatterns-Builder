@@ -7,10 +7,6 @@
 
 namespace Creational\Builder;
 
-/**
- * Interface MasterInterface
- * @package Creational\Builder
- */
 interface MasterInterface
 {
     /**
