@@ -3,11 +3,15 @@
 declare(strict_types=1);
 
 /**
- * @author    : Korotkov Danila <dankorot@gmail.com>
- * @license   https://mit-license.org/ MIT
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
  */
 
 namespace Creational\Builder;
+
+use Creational\Builder\Interfaces\MasterInterface;
+use Creational\Builder\Interfaces\BuilderInterface;
+use Creational\Builder\Interfaces\ComputerInterface;
 
 class Master implements MasterInterface
 {
@@ -21,7 +25,7 @@ class Master implements MasterInterface
      */
     public function build(): ComputerInterface
     {
-        return $this->getBuilder()->getComputer();
+        return $this->builder->getComputer();
     }
 
     /**
@@ -39,5 +43,4 @@ class Master implements MasterInterface
     {
         $this->builder = $builder;
     }
-
 }
