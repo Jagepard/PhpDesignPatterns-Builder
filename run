@@ -16,11 +16,11 @@ require_once 'vendor/autoload.php';
 $employee = new Master();
 $employee->setBuilder(new PCBuilder());
 $employee->getBuilder()
-    ->setParam(new Motherboard(Order::MB))
-    ->setParam(new Cpu(Order::CPU))
-    ->setParam(new Ram(Order::RAM))
-    ->setParam(new Gpu(Order::GPU))
-    ->setParam(new Ssd(Order::SSD))
-    ->setParam(new Hdd(Order::HDD));
+    ->setPart(new Motherboard(Order::MB))
+    ->setPart(new Cpu(Order::CPU))
+    ->setPart(new Ram(Order::RAM))
+    ->setPart(new Gpu(Order::GPU))
+    ->setPart(new Ssd(Order::SSD))
+    ->setPart(new Hdd(Order::HDD));
 
 print_r($employee->getBuilder()->getComputer());
