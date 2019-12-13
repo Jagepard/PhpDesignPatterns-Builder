@@ -15,7 +15,7 @@ interface BuilderInterface
      * @param AbstractPart $params
      * @return BuilderInterface
      */
-    public function setParam(AbstractPart $params): BuilderInterface;
+    public function setPart(AbstractPart $params): BuilderInterface;
 
     /**
      * @return ComputerInterface
