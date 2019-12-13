@@ -1,13 +1,14 @@
 <?php
 
-declare(strict_types=1);
-
 /**
- * @author    : Korotkov Danila <dankorot@gmail.com>
- * @license   https://mit-license.org/ MIT
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
  */
 
 namespace Creational\Builder;
+
+use Creational\Builder\Hardware\AbstractPart;
+use Creational\Builder\Interfaces\ComputerInterface;
 
 class Desktop implements ComputerInterface
 {
@@ -17,11 +18,20 @@ class Desktop implements ComputerInterface
     private $components = [];
 
     /**
-     * AbstractComputer constructor.
-     * @param array $params
+     * Desktop constructor.
+     * @param  array  $params
      */
     public function __construct(array $params)
     {
         $this->components = $params;
+    }
+
+    /**
+     * @param  string  $part
+     * @return AbstractPart
+     */
+    public function getComponent(string $part): AbstractPart
+    {
+        return $this->components[$part];
     }
 }
