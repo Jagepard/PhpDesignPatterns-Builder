@@ -19,11 +19,11 @@ class Desktop implements ComputerInterface
 
     /**
      * Desktop constructor.
-     * @param  array  $params
+     * @param  array  $part
      */
-    public function __construct(array $params)
+    public function __construct(array $part)
     {
-        $this->components = $params;
+        $this->components = $part;
     }
 
     /**
