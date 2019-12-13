@@ -12,10 +12,10 @@ use Creational\Builder\Hardware\AbstractPart;
 interface BuilderInterface
 {
     /**
-     * @param AbstractPart $params
+     * @param AbstractPart $part
      * @return BuilderInterface
      */
-    public function setPart(AbstractPart $params): BuilderInterface;
+    public function setPart(AbstractPart $part): BuilderInterface;
 
     /**
      * @return ComputerInterface
