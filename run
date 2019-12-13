@@ -1,18 +1,26 @@
 #! usr/bin/env php
 <?php
 
-namespace Creational\Builder;
+use Creational\Builder\Order;
+use Creational\Builder\Master;
+use Creational\Builder\PCBuilder;
+use Creational\Builder\Hardware\Cpu;
+use Creational\Builder\Hardware\Gpu;
+use Creational\Builder\Hardware\Motherboard;
+use Creational\Builder\Hardware\Ram;
+use Creational\Builder\Hardware\Ssd;
+use Creational\Builder\Hardware\Hdd;
 
 require_once 'vendor/autoload.php';
 
-$employee= new Master();
-$employee->setBuilder(new DesktopBuilder());
+$employee = new Master();
+$employee->setBuilder(new PCBuilder());
 $employee->getBuilder()
-    ->setParam(new Motherboard('Hardware'))
-    ->setParam(new Hdd('2Tb'))
-    ->setParam(new Ram('32Gb'))
-    ->setParam(new Cpu('8 core'))
-    ->setParam(new Gpu('16Gb'))
-    ->setParam(new Software('UNIX'));
+    ->setParam(new Motherboard(Order::MB))
+    ->setParam(new Cpu(Order::CPU))
+    ->setParam(new Ram(Order::RAM))
+    ->setParam(new Gpu(Order::GPU))
+    ->setParam(new Ssd(Order::SSD))
+    ->setParam(new Hdd(Order::HDD));
 
-print_r($employee->build());
+print_r($employee->getBuilder()->getComputer());
