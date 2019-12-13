@@ -23,7 +23,7 @@
 
 | Visibility | Function |
 |:-----------|:---------|
-| public | <strong>__construct(</strong><em>array</em> <strong>$params</strong>)</strong> : <em>void</em><br /><em>Desktop constructor.</em> |
+| public | <strong>__construct(</strong><em>array</em> <strong>$part</strong>)</strong> : <em>void</em><br /><em>Desktop constructor.</em> |
 | public | <strong>getComponent(</strong><em>\string</em> <strong>$part</strong>)</strong> : <em>[\Creational\Builder\Hardware\AbstractPart](#class-creationalbuilderhardwareabstractpart-abstract)</em> |
 
 *This class implements [\Creational\Builder\Interfaces\ComputerInterface](#interface-creationalbuilderinterfacescomputerinterface)*
@@ -168,5 +168,5 @@
 | Visibility | Function |
 |:-----------|:---------|
 | public | <strong>getComputer()</strong> : <em>[\Creational\Builder\Interfaces\ComputerInterface](#interface-creationalbuilderinterfacescomputerinterface)</em> |
-| public | <strong>setPart(</strong><em>[\Creational\Builder\Hardware\AbstractPart](#class-creationalbuilderhardwareabstractpart-abstract)</em> <strong>$params</strong>)</strong> : <em>[\Creational\Builder\Interfaces\BuilderInterface](#interface-creationalbuilderinterfacesbuilderinterface)</em> |
+| public | <strong>setPart(</strong><em>[\Creational\Builder\Hardware\AbstractPart](#class-creationalbuilderhardwareabstractpart-abstract)</em> <strong>$part</strong>)</strong> : <em>[\Creational\Builder\Interfaces\BuilderInterface](#interface-creationalbuilderinterfacesbuilderinterface)</em> |
 
