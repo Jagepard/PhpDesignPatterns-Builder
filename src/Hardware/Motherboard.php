@@ -15,6 +15,6 @@ class Motherboard extends AbstractPart
      */
     public function __construct(string $chipset)
     {
-        $this->value = $chipset;
+        parent::__construct($chipset);
     }
 }
