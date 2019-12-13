@@ -38,12 +38,12 @@ class BuilderTest extends PHPUnit_Framework_TestCase
         $this->master = new Master();
         $this->master->setBuilder(new PCBuilder());
         $this->master->getBuilder()
-            ->setParam(new Motherboard(Order::MB))
-            ->setParam(new Cpu(Order::CPU))
-            ->setParam(new Ram(Order::RAM))
-            ->setParam(new Gpu(Order::GPU))
-            ->setParam(new Ssd(Order::SSD))
-            ->setParam(new Hdd(Order::HDD));
+            ->setPart(new Motherboard(Order::MB))
+            ->setPart(new Cpu(Order::CPU))
+            ->setPart(new Ram(Order::RAM))
+            ->setPart(new Gpu(Order::GPU))
+            ->setPart(new Ssd(Order::SSD))
+            ->setPart(new Hdd(Order::HDD));
 
         $this->desktop = $this->master->build();
     }
