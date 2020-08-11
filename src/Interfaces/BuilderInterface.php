@@ -11,14 +11,6 @@ use Creational\Builder\Hardware\AbstractPart;
 
 interface BuilderInterface
 {
-    /**
-     * @param AbstractPart $part
-     * @return BuilderInterface
-     */
     public function setPart(AbstractPart $part): BuilderInterface;
-
-    /**
-     * @return ComputerInterface
-     */
     public function getComputer(): ComputerInterface;
 }

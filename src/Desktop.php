@@ -7,29 +7,17 @@
 
 namespace Creational\Builder;
 
-use Creational\Builder\Hardware\AbstractPart;
-use Creational\Builder\Interfaces\ComputerInterface;
+use Creational\Builder\{Hardware\AbstractPart, Interfaces\ComputerInterface};
 
 class Desktop implements ComputerInterface
 {
-    /**
-     * @var array
-     */
-    private $components = [];
+    private array $components = [];
 
-    /**
-     * Desktop constructor.
-     * @param  array  $part
-     */
     public function __construct(array $part)
     {
         $this->components = $part;
     }
 
-    /**
-     * @param  string  $part
-     * @return AbstractPart
-     */
     public function getComponent(string $part): AbstractPart
     {
         return $this->components[$part];

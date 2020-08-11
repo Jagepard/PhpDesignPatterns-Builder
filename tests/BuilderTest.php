@@ -7,37 +7,28 @@
 
 namespace Creational\Builder\Tests;
 
-use Creational\Builder\Order;
-use Creational\Builder\Master;
-use Creational\Builder\PCBuilder;
-use Creational\Builder\Hardware\Cpu;
-use Creational\Builder\Hardware\Gpu;
-use Creational\Builder\Hardware\Ram;
-use Creational\Builder\Hardware\Ssd;
-use Creational\Builder\Hardware\Hdd;
-use Creational\Builder\Hardware\Motherboard;
-use Creational\Builder\Interfaces\MasterInterface;
-use Creational\Builder\Interfaces\ComputerInterface;
-
+use Creational\Builder\{Order,
+    Master,
+    PCBuilder,
+    Hardware\Cpu,
+    Hardware\Gpu,
+    Hardware\Ram,
+    Hardware\Ssd,
+    Hardware\Hdd,
+    Hardware\Motherboard,
+    Interfaces\ComputerInterface
+};
 use PHPUnit\Framework\TestCase as PHPUnit_Framework_TestCase;
 
 class BuilderTest extends PHPUnit_Framework_TestCase
 {
-    /**
-     * @var MasterInterface
-     */
-    private $master;
-
-    /**
-     * @var ComputerInterface
-     */
-    private $desktop;
+    private ComputerInterface $desktop;
 
     protected function setUp(): void
     {
-        $this->master = new Master();
-        $this->master->setBuilder(new PCBuilder());
-        $this->master->getBuilder()
+        $master = new Master();
+        $master->setBuilder(new PCBuilder());
+        $master->getBuilder()
             ->setPart(new Motherboard(Order::MB))
             ->setPart(new Cpu(Order::CPU))
             ->setPart(new Ram(Order::RAM))
@@ -45,7 +36,7 @@ class BuilderTest extends PHPUnit_Framework_TestCase
             ->setPart(new Ssd(Order::SSD))
             ->setPart(new Hdd(Order::HDD));
 
-        $this->desktop = $this->master->build();
+        $this->desktop = $master->build();
     }
 
     public function testInstance()
