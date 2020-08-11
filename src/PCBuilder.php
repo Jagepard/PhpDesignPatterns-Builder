@@ -9,30 +9,18 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-use Creational\Builder\Hardware\AbstractPart;
-use Creational\Builder\Interfaces\BuilderInterface;
-use Creational\Builder\Interfaces\ComputerInterface;
+use Creational\Builder\{Hardware\AbstractPart, Interfaces\BuilderInterface, Interfaces\ComputerInterface};
 
 class PCBuilder implements BuilderInterface
 {
-    /**
-     * @var array
-     */
-    private $components;
+    private array $components;
 
-    /**
-     * @param AbstractPart $part
-     * @return BuilderInterface
-     */
     public function setPart(AbstractPart $part): BuilderInterface
     {
         $this->components[get_class($part)] = $part;
         return $this;
     }
 
-    /**
-     * @return ComputerInterface
-     */
     public function getComputer(): ComputerInterface
     {
         return new Desktop($this->components);

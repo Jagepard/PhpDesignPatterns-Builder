@@ -9,9 +9,7 @@ declare(strict_types=1);
 
 namespace Creational\Builder;
 
-use Creational\Builder\Interfaces\MasterInterface;
-use Creational\Builder\Interfaces\BuilderInterface;
-use Creational\Builder\Interfaces\ComputerInterface;
+use Creational\Builder\Interfaces\{MasterInterface, BuilderInterface, ComputerInterface};
 
 class Master implements MasterInterface
 {

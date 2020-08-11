@@ -11,7 +11,7 @@ use Creational\Builder\Hardware\Ram;
 use Creational\Builder\Hardware\Ssd;
 use Creational\Builder\Hardware\Hdd;
 
-require_once 'vendor/autoload.php';
+require_once "vendor/autoload.php";
 
 $employee = new Master();
 $employee->setBuilder(new PCBuilder());
