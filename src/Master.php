@@ -13,30 +13,18 @@ use Creational\Builder\Interfaces\{MasterInterface, BuilderInterface, ComputerIn
 
 class Master implements MasterInterface
 {
-    /**
-     * @var BuilderInterface
-     */
-    private $builder;
+    private BuilderInterface $builder;
 
-    /**
-     * @return ComputerInterface
-     */
     public function build(): ComputerInterface
     {
         return $this->builder->getComputer();
     }
 
-    /**
-     * @return BuilderInterface
-     */
     public function getBuilder(): BuilderInterface
     {
         return $this->builder;
     }
 
-    /**
-     * @param BuilderInterface $builder
-     */
     public function setBuilder(BuilderInterface $builder): void
     {
         $this->builder = $builder;
