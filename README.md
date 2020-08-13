@@ -9,3 +9,44 @@
 ```php run``` execute in terminal
 
 ![Builder](https://github.com/Jagepard/PhpDesignPatterns-Builder/blob/master/UML.png)
+
+##Result:
+```
+Creational\Builder\Desktop Object
+(
+    [components:Creational\Builder\Desktop:private] => Array
+        (
+            [Creational\Builder\Hardware\Motherboard] => Creational\Builder\Hardware\Motherboard Object
+                (
+                    [value:protected] => B450
+                )
+
+            [Creational\Builder\Hardware\Cpu] => Creational\Builder\Hardware\Cpu Object
+                (
+                    [value:protected] => AMD Ryzen™ 5 3600
+                )
+
+            [Creational\Builder\Hardware\Ram] => Creational\Builder\Hardware\Ram Object
+                (
+                    [value:protected] => DDR4 32Gb 3200MHz PC25600
+                )
+
+            [Creational\Builder\Hardware\Gpu] => Creational\Builder\Hardware\Gpu Object
+                (
+                    [value:protected] => GeForce RTX 2060
+                )
+
+            [Creational\Builder\Hardware\Ssd] => Creational\Builder\Hardware\Ssd Object
+                (
+                    [value:protected] => 240Gb
+                )
+
+            [Creational\Builder\Hardware\Hdd] => Creational\Builder\Hardware\Hdd Object
+                (
+                    [value:protected] => 2Tb
+                )
+
+        )
+
+)
+```
