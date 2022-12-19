@@ -8,7 +8,7 @@
 namespace Creational\Builder\Tests;
 
 use Creational\Builder\{Order,
-    Master,
+    Director,
     PCBuilder,
     Hardware\Cpu,
     Hardware\Gpu,
@@ -26,17 +26,9 @@ class BuilderTest extends PHPUnit_Framework_TestCase
 
     protected function setUp(): void
     {
-        $master = new Master();
-        $master->setBuilder(new PCBuilder());
-        $master->getBuilder()
-            ->setPart(new Motherboard(Order::MB))
-            ->setPart(new Cpu(Order::CPU))
-            ->setPart(new Ram(Order::RAM))
-            ->setPart(new Gpu(Order::GPU))
-            ->setPart(new Ssd(Order::SSD))
-            ->setPart(new Hdd(Order::HDD));
-
-        $this->desktop = $master->build();
+        $employe = new Director();
+        $employe->setBuilder(new PCBuilder());
+        $this->desktop = $employe->build();
     }
 
     public function testInstance()
