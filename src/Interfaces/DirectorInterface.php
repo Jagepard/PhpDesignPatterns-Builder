@@ -7,9 +7,7 @@
 
 namespace Creational\Builder\Interfaces;
 
-interface MasterInterface
+interface DirectorInterface
 {
     public function build(): ComputerInterface;
-    public function getBuilder(): BuilderInterface;
-    public function setBuilder(BuilderInterface $builder): void;
 }
