@@ -5,7 +5,6 @@ namespace Creational\Builder;
 require_once "vendor/autoload.php";
 
 $employee = new Director();
-$employee->setBuilder(new PCBuilder());
-$desktop  = $employee->build();
+$desktop  = $employee->build(new PCBuilder());
 
 print_r($desktop);
