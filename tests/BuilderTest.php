@@ -27,8 +27,7 @@ class BuilderTest extends PHPUnit_Framework_TestCase
     protected function setUp(): void
     {
         $employe = new Director();
-        $employe->setBuilder(new PCBuilder());
-        $this->desktop = $employe->build();
+        $this->desktop = $employe->build(new PCBuilder());
     }
 
     public function testInstance()
