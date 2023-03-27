@@ -9,8 +9,4 @@ namespace Creational\Builder\Hardware;
 
 class Motherboard extends AbstractPart
 {
-    public function __construct(string $chipset)
-    {
-        parent::__construct($chipset);
-    }
 }

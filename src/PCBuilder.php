@@ -15,6 +15,13 @@ class PCBuilder implements BuilderInterface
 {
     private array $components;
 
+    /**
+     * Assembles a computer
+     * --------------------
+     * Собирает компьютер
+     *
+     * @return ComputerInterface
+     */
     public function createComputer(): ComputerInterface
     {
         $this
@@ -28,6 +35,14 @@ class PCBuilder implements BuilderInterface
         return new Desktop($this->components);
     }
 
+    /**
+     * Adds a computer element
+     * ----------------------------
+     * Добавляет элемент компьютера
+     *
+     * @param  AbstractPart     $part
+     * @return BuilderInterface
+     */
     private function setPart(AbstractPart $part): BuilderInterface
     {
         $this->components[get_class($part)] = $part;

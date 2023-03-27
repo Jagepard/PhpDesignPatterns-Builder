@@ -9,5 +9,9 @@ namespace Creational\Builder\Interfaces;
 
 interface DirectorInterface
 {
+    /**
+     * @param  BuilderInterface  $builder
+     * @return ComputerInterface
+     */
     public function build(BuilderInterface $builder): ComputerInterface;
 }
