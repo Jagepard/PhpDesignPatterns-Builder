@@ -9,5 +9,8 @@ namespace Creational\Builder\Interfaces;
 
 interface BuilderInterface
 {
+    /**
+     * @return ComputerInterface
+     */
     public function createComputer(): ComputerInterface;
 }

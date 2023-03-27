@@ -13,6 +13,14 @@ use Creational\Builder\Interfaces\{DirectorInterface, BuilderInterface, Computer
 
 class Director implements DirectorInterface
 {
+    /**
+     * Assembles a computer
+     * --------------------
+     * Собирает компьютер
+     *
+     * @param  BuilderInterface  $builder
+     * @return ComputerInterface
+     */
     public function build(BuilderInterface $builder): ComputerInterface
     {
         return $builder->createComputer();
